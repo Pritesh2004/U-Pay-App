@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../screens/payment_confirmation.dart';
+
 class otpWidget extends StatefulWidget {
   @override
   State<otpWidget> createState() => _otpWidgetState();
@@ -99,6 +101,10 @@ class _otpWidgetState extends State<otpWidget> {
                       backgroundColor: Color(0xff24B3A8)),
                   child: Text('Submit'),
                   onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PaymentConformationScreen()));
                     String pin = '';
                     controllers.forEach((element) => pin += element.text);
                     print('UPI pin:$pin');
