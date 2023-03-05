@@ -92,11 +92,16 @@ class HomePage extends StatelessWidget {
                     child: SingleChildScrollView(
                       child: Container(
                         child: Padding(
-                          padding: EdgeInsets.only(top: 20.0),
+
+                          padding: EdgeInsets.fromLTRB(20, 20,20,20),
                           child: Column(
+
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+
+
+
                               Text(
                                 "Accounts",
                                 style: TextStyle(

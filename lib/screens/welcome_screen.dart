@@ -14,8 +14,8 @@ class WelcomeScreen extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xff24B3A8),
-              Color(0xff24B3A8),
+              Colors.black87,
+              Colors.black87,
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -70,7 +70,7 @@ class WelcomeScreen extends StatelessWidget {
                         height: 170.0,
                       ),
                       RoundedButton(
-                          Colour: Colors.black,
+                          Colour:   Color(0xff24B3A8),
                           Name: 'Registor',
                           onPressed: () {
                             Navigator.push(
@@ -91,7 +91,7 @@ class WelcomeScreen extends StatelessWidget {
                         height: 00.0,
                       ),
                       RoundedButton(
-                          Colour: Colors.black,
+                          Colour:   Color(0xff24B3A8),
                           Name: 'Log In',
                           onPressed: () {
                             Navigator.push(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:u_pay_app/components/input_field.dart';
 import 'package:u_pay_app/components/rounded_button.dart';
 import 'package:u_pay_app/components/password_field.dart';
+import 'package:u_pay_app/screens/home.dart';
 import 'package:u_pay_app/screens/home_page.dart';
 import 'package:u_pay_app/screens/otp_screen.dart';
 import 'package:u_pay_app/screens/welcome_screen.dart';
@@ -25,7 +26,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   late String Username;
   late String newPassword;
   late String confirmPassword;
-  late double balance = 0;
+  late double balance = 5000;
 
   final _firestore = FirebaseFirestore.instance;
 
@@ -264,7 +265,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   RoundedButton(
                                     Colour: Color(0xff24B3A8),
                                     Name: 'Submit',
-                                    onPressed: () {
+                                    onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+                                      print('User added');
                                       _firestore.collection('Users').add({
                                         'Balance': balance,
                                         'Email': Email,
